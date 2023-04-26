@@ -45,7 +45,7 @@ def main_cl(params):
     class_per_entity = len(params.schema)-1
     
     # Initialize the model for the first group of classes
-    if params.model_name in ['bert-base-cased','roberta-base','bert-base-chinese']:
+    if params.model_name in ['neuralmind/bert-base-portuguese-cased', 'bert-base-cased','roberta-base','bert-base-chinese']:
         # BERT-based NER Tagger
         model = BertTagger(output_dim=(1+class_per_entity*params.nb_class_fg), params=params)
     else:
@@ -84,7 +84,7 @@ def main_cl(params):
         # Initialize a new model
         if params.is_from_scratch or iteration == 0:
             # Initialize the model for the first group of classes
-            if params.model_name in ['bert-base-cased','roberta-base','bert-base-chinese']:
+            if params.model_name in ['neuralmind/bert-base-portuguese-cased', 'bert-base-cased','roberta-base','bert-base-chinese']:
                 # BERT-based NER Tagger
                 model = BertTagger(output_dim=(1+class_per_entity*(params.nb_class_fg+iteration*params.nb_class_pg)), params=params)
             else:

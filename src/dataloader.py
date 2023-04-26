@@ -25,7 +25,7 @@ max_seq_length = params.max_seq_length
 # domain name to entity list
 domain2entity={
     # #tcm09=6
-    'tcm09': ['OBJETO_LICITACAO', 'NUMERO_EXERCICIO', 'CRITERIO_JULGAMENTO', 'VALOR_OBJETO', 'MODALIDADE_LICITACAO', 'DATA_SESSAO'],
+    'tcm09': ['NUMERO_EXERCICIO', 'CRITERIO_JULGAMENTO', 'VALOR_OBJETO', 'MODALIDADE_LICITACAO', 'DATA_SESSAO', 'OBJETO_LICITACAO'],
     # #conll2003=4
     'conll2003': ['location', 'misc', 'organisation', 'person'], 
     # #ontonotes5=18
@@ -710,6 +710,7 @@ class NER_dataloader():
 
 if __name__ == "__main__":
     pass
+    spilt_dataset_random(['datasets/NER_data/tcm09'], 'train', domain2entity['tcm09'], 1, 1, 'BIO')
     # spilt_dataset_random(['datasets/NER_data/conll2003'], 'train', domain2entity['conll2003'], 1, 1, 'BIO')
     # print_split_data_statistic(['datasets/NER_data/conll2003'], 'train', domain2entity['conll2003'], 1, 1, 'BIO')
     # get_entity_list('datasets/NER_data/i2b2/train.txt')

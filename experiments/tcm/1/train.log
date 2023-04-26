@@ -1,0 +1,304 @@
+INFO - 04/26/23 11:58:36 - 0:00:00 - ============ Initialized logger ============
+INFO - 04/26/23 11:58:36 - 0:00:00 - adaptive_distill_weight: False
+                                     adaptive_schedule: root
+                                     alpha: 0
+                                     batch_size: 8
+                                     cfg: ./config/tcm09/tcm09_distill.yaml
+                                     ckpt: None
+                                     cl_epoch_end: 10
+                                     cl_epoch_start: 1
+                                     cl_prob_end: 0
+                                     cl_prob_start: 0.9
+                                     cl_tmp_end: 0.001
+                                     cl_tmp_start: 0.001
+                                     data_path: ['datasets/NER_data/tcm09']
+                                     debug: False
+                                     distill_weight: 1
+                                     dropout: 0
+                                     dump_path: experiments/tcm/1
+                                     early_stop: 100
+                                     entity_list: 
+                                     evaluate_interval: 1
+                                     exp_id: 1
+                                     exp_name: tcm
+                                     extra_annotate_type: none
+                                     first_training_epochs: 10
+                                     first_training_steps: 0
+                                     gamma: 0.2
+                                     hidden_dim: 768
+                                     info_per_epochs: 1
+                                     info_per_steps: 0
+                                     is_DCE: False
+                                     is_MTL: False
+                                     is_ODCE: False
+                                     is_curriculum_learning: False
+                                     is_distill: True
+                                     is_filter_O: False
+                                     is_fix_trained_classifier: True
+                                     is_from_scratch: False
+                                     is_load_ckpt_if_exists: True
+                                     is_load_common_first_model: True
+                                     is_load_disjoin_train: True
+                                     is_lucir: False
+                                     is_podnet: False
+                                     is_ranking_loss: False
+                                     is_rescale_new_weight: True
+                                     is_train_by_steps: False
+                                     is_unfix_O_classifier: False
+                                     logger_filename: train.log
+                                     lr: 2e-3
+                                     lucir_K: 1
+                                     lucir_lw_distill: 50
+                                     lucir_lw_mr: 1
+                                     lucir_mr_dist: 0.5
+                                     max_seq_length: 512
+                                     model_name: neuralmind/bert-base-portuguese-cased
+                                     mu: 0.9
+                                     n_samples: -1
+                                     nb_class_fg: 1
+                                     nb_class_pg: 1
+                                     none_idx: 103
+                                     podnet_is_nca: False
+                                     podnet_lw_pod_flat: 1
+                                     podnet_lw_pod_spat: 1
+                                     podnet_nca_margin: 0.6
+                                     podnet_nca_scale: 1
+                                     podnet_normalize: False
+                                     ranking_weight: 5
+                                     ref_temperature: 1
+                                     reserved_ratio: 0
+                                     sample_ratio: 0.5
+                                     sample_strategy: all
+                                     save_per_epochs: 0
+                                     save_per_steps: 0
+                                     schedule: (5,)
+                                     schema: BIO
+                                     seed: None
+                                     stable_lr: 4e-4
+                                     temperature: 2
+                                     top_k: 3
+                                     training_epochs: 10
+                                     training_steps: 0
+                                     weight_decay: 0.0005
+INFO - 04/26/23 11:58:36 - 0:00:00 - The experiment will be stored in experiments/tcm/1
+                                     
+INFO - 04/26/23 11:58:36 - 0:00:00 - {'debug': False, 'cfg': './config/tcm09/tcm09_distill.yaml', 'exp_name': 'tcm', 'logger_filename': 'train.log', 'dump_path': 'experiments/tcm/1', 'exp_id': '1', 'seed': None, 'model_name': 'neuralmind/bert-base-portuguese-cased', 'is_load_ckpt_if_exists': True, 'is_load_common_first_model': True, 'ckpt': None, 'dropout': 0, 'hidden_dim': 768, 'alpha': 0, 'none_idx': 103, 'data_path': ['datasets/NER_data/tcm09'], 'n_samples': -1, 'entity_list': '', 'schema': 'BIO', 'is_filter_O': False, 'is_load_disjoin_train': True, 'batch_size': 8, 'max_seq_length': 512, 'lr': '2e-3', 'is_train_by_steps': False, 'training_epochs': 10, 'first_training_epochs': 10, 'training_steps': 0, 'first_training_steps': 0, 'schedule': '(5,)', 'stable_lr': '4e-4', 'gamma': 0.2, 'mu': 0.9, 'weight_decay': 0.0005, 'info_per_epochs': 1, 'info_per_steps': 0, 'save_per_epochs': 0, 'save_per_steps': 0, 'evaluate_interval': 1, 'early_stop': 100, 'nb_class_pg': 1, 'nb_class_fg': 1, 'is_rescale_new_weight': True, 'is_fix_trained_classifier': True, 'is_unfix_O_classifier': False, 'is_MTL': False, 'extra_annotate_type': 'none', 'is_from_scratch': False, 'reserved_ratio': 0, 'is_distill': True, 'distill_weight': 1, 'adaptive_distill_weight': False, 'adaptive_schedule': 'root', 'temperature': 2, 'ref_temperature': 1, 'is_ranking_loss': False, 'ranking_weight': 5, 'is_lucir': False, 'lucir_lw_distill': 50, 'lucir_K': 1, 'lucir_mr_dist': 0.5, 'lucir_lw_mr': 1, 'is_podnet': False, 'podnet_is_nca': False, 'podnet_nca_scale': 1, 'podnet_nca_margin': 0.6, 'podnet_lw_pod_flat': 1, 'podnet_lw_pod_spat': 1, 'podnet_normalize': False, 'is_DCE': False, 'is_ODCE': False, 'sample_strategy': 'all', 'sample_ratio': 0.5, 'top_k': 3, 'is_curriculum_learning': False, 'cl_epoch_start': 1, 'cl_epoch_end': 10, 'cl_prob_start': 0.9, 'cl_prob_end': 0, 'cl_tmp_start': 0.001, 'cl_tmp_end': 0.001}
+INFO - 04/26/23 11:58:36 - 0:00:00 - Loading the default entity list from domain tcm09...
+INFO - 04/26/23 11:58:36 - 0:00:00 - label_list = ['O', 'B-NUMERO_EXERCICIO', 'I-NUMERO_EXERCICIO', 'B-CRITERIO_JULGAMENTO', 'I-CRITERIO_JULGAMENTO', 'B-VALOR_OBJETO', 'I-VALOR_OBJETO', 'B-MODALIDADE_LICITACAO', 'I-MODALIDADE_LICITACAO', 'B-DATA_SESSAO', 'I-DATA_SESSAO', 'B-OBJETO_LICITACAO', 'I-OBJETO_LICITACAO']
+INFO - 04/26/23 11:58:36 - 0:00:00 - Load training set data
+INFO - 04/26/23 11:58:36 - 0:00:00 - Loading data from datasets/NER_data/tcm09/train_fg_1_pg_1.pth...
+INFO - 04/26/23 11:59:07 - 0:00:00 - ============ Initialized logger ============
+INFO - 04/26/23 11:59:07 - 0:00:00 - adaptive_distill_weight: False
+                                     adaptive_schedule: root
+                                     alpha: 0
+                                     batch_size: 8
+                                     cfg: ./config/tcm09/tcm09_distill.yaml
+                                     ckpt: None
+                                     cl_epoch_end: 10
+                                     cl_epoch_start: 1
+                                     cl_prob_end: 0
+                                     cl_prob_start: 0.9
+                                     cl_tmp_end: 0.001
+                                     cl_tmp_start: 0.001
+                                     data_path: ['datasets/NER_data/tcm09']
+                                     debug: False
+                                     distill_weight: 1
+                                     dropout: 0
+                                     dump_path: experiments/tcm/1
+                                     early_stop: 100
+                                     entity_list: 
+                                     evaluate_interval: 1
+                                     exp_id: 1
+                                     exp_name: tcm
+                                     extra_annotate_type: none
+                                     first_training_epochs: 10
+                                     first_training_steps: 0
+                                     gamma: 0.2
+                                     hidden_dim: 768
+                                     info_per_epochs: 1
+                                     info_per_steps: 0
+                                     is_DCE: False
+                                     is_MTL: False
+                                     is_ODCE: False
+                                     is_curriculum_learning: False
+                                     is_distill: True
+                                     is_filter_O: False
+                                     is_fix_trained_classifier: True
+                                     is_from_scratch: False
+                                     is_load_ckpt_if_exists: True
+                                     is_load_common_first_model: True
+                                     is_load_disjoin_train: True
+                                     is_lucir: False
+                                     is_podnet: False
+                                     is_ranking_loss: False
+                                     is_rescale_new_weight: True
+                                     is_train_by_steps: False
+                                     is_unfix_O_classifier: False
+                                     logger_filename: train.log
+                                     lr: 2e-3
+                                     lucir_K: 1
+                                     lucir_lw_distill: 50
+                                     lucir_lw_mr: 1
+                                     lucir_mr_dist: 0.5
+                                     max_seq_length: 512
+                                     model_name: neuralmind/bert-base-portuguese-cased
+                                     mu: 0.9
+                                     n_samples: -1
+                                     nb_class_fg: 1
+                                     nb_class_pg: 1
+                                     none_idx: 103
+                                     podnet_is_nca: False
+                                     podnet_lw_pod_flat: 1
+                                     podnet_lw_pod_spat: 1
+                                     podnet_nca_margin: 0.6
+                                     podnet_nca_scale: 1
+                                     podnet_normalize: False
+                                     ranking_weight: 5
+                                     ref_temperature: 1
+                                     reserved_ratio: 0
+                                     sample_ratio: 0.5
+                                     sample_strategy: all
+                                     save_per_epochs: 0
+                                     save_per_steps: 0
+                                     schedule: (5,)
+                                     schema: BIO
+                                     seed: None
+                                     stable_lr: 4e-4
+                                     temperature: 2
+                                     top_k: 3
+                                     training_epochs: 10
+                                     training_steps: 0
+                                     weight_decay: 0.0005
+INFO - 04/26/23 11:59:07 - 0:00:00 - The experiment will be stored in experiments/tcm/1
+                                     
+INFO - 04/26/23 11:59:07 - 0:00:00 - {'debug': False, 'cfg': './config/tcm09/tcm09_distill.yaml', 'exp_name': 'tcm', 'logger_filename': 'train.log', 'dump_path': 'experiments/tcm/1', 'exp_id': '1', 'seed': None, 'model_name': 'neuralmind/bert-base-portuguese-cased', 'is_load_ckpt_if_exists': True, 'is_load_common_first_model': True, 'ckpt': None, 'dropout': 0, 'hidden_dim': 768, 'alpha': 0, 'none_idx': 103, 'data_path': ['datasets/NER_data/tcm09'], 'n_samples': -1, 'entity_list': '', 'schema': 'BIO', 'is_filter_O': False, 'is_load_disjoin_train': True, 'batch_size': 8, 'max_seq_length': 512, 'lr': '2e-3', 'is_train_by_steps': False, 'training_epochs': 10, 'first_training_epochs': 10, 'training_steps': 0, 'first_training_steps': 0, 'schedule': '(5,)', 'stable_lr': '4e-4', 'gamma': 0.2, 'mu': 0.9, 'weight_decay': 0.0005, 'info_per_epochs': 1, 'info_per_steps': 0, 'save_per_epochs': 0, 'save_per_steps': 0, 'evaluate_interval': 1, 'early_stop': 100, 'nb_class_pg': 1, 'nb_class_fg': 1, 'is_rescale_new_weight': True, 'is_fix_trained_classifier': True, 'is_unfix_O_classifier': False, 'is_MTL': False, 'extra_annotate_type': 'none', 'is_from_scratch': False, 'reserved_ratio': 0, 'is_distill': True, 'distill_weight': 1, 'adaptive_distill_weight': False, 'adaptive_schedule': 'root', 'temperature': 2, 'ref_temperature': 1, 'is_ranking_loss': False, 'ranking_weight': 5, 'is_lucir': False, 'lucir_lw_distill': 50, 'lucir_K': 1, 'lucir_mr_dist': 0.5, 'lucir_lw_mr': 1, 'is_podnet': False, 'podnet_is_nca': False, 'podnet_nca_scale': 1, 'podnet_nca_margin': 0.6, 'podnet_lw_pod_flat': 1, 'podnet_lw_pod_spat': 1, 'podnet_normalize': False, 'is_DCE': False, 'is_ODCE': False, 'sample_strategy': 'all', 'sample_ratio': 0.5, 'top_k': 3, 'is_curriculum_learning': False, 'cl_epoch_start': 1, 'cl_epoch_end': 10, 'cl_prob_start': 0.9, 'cl_prob_end': 0, 'cl_tmp_start': 0.001, 'cl_tmp_end': 0.001}
+INFO - 04/26/23 11:59:07 - 0:00:00 - Loading the default entity list from domain tcm09...
+INFO - 04/26/23 11:59:07 - 0:00:00 - label_list = ['O', 'B-NUMERO_EXERCICIO', 'I-NUMERO_EXERCICIO', 'B-CRITERIO_JULGAMENTO', 'I-CRITERIO_JULGAMENTO', 'B-VALOR_OBJETO', 'I-VALOR_OBJETO', 'B-MODALIDADE_LICITACAO', 'I-MODALIDADE_LICITACAO', 'B-DATA_SESSAO', 'I-DATA_SESSAO', 'B-OBJETO_LICITACAO', 'I-OBJETO_LICITACAO']
+INFO - 04/26/23 11:59:07 - 0:00:00 - Load training set data
+INFO - 04/26/23 11:59:07 - 0:00:00 - Loading data from datasets/NER_data/tcm09/train_fg_1_pg_1.pth...
+INFO - 04/26/23 11:59:07 - 0:00:00 - train size for each split: ['0_0:4661', '1_1:4661', '2_2:4661', '3_3:4661', '4_4:4661', '5_5:4661']
+INFO - 04/26/23 11:59:07 - 0:00:00 - Load development set data
+INFO - 04/26/23 11:59:15 - 0:00:09 - Load test set data
+INFO - 04/26/23 11:59:49 - 0:00:42 - label distribution for dev set
+INFO - 04/26/23 11:59:49 - 0:00:42 - [('CRITERIO_JULGAMENTO', 142), ('DATA_SESSAO', 90), ('MODALIDADE_LICITACAO', 648), ('NUMERO_EXERCICIO', 330), ('OBJETO_LICITACAO', 106), ('VALOR_OBJETO', 32)]
+INFO - 04/26/23 11:59:49 - 0:00:42 - label distribution for test set
+INFO - 04/26/23 11:59:49 - 0:00:42 - [('CRITERIO_JULGAMENTO', 175), ('DATA_SESSAO', 81), ('MODALIDADE_LICITACAO', 871), ('NUMERO_EXERCICIO', 300), ('OBJETO_LICITACAO', 224), ('VALOR_OBJETO', 56)]
+INFO - 04/26/23 11:59:49 - 0:00:42 - dev size 4936; test size: 23716;
+INFO - 04/26/23 12:05:24 - 0:00:00 - ============ Initialized logger ============
+INFO - 04/26/23 12:05:24 - 0:00:00 - adaptive_distill_weight: False
+                                     adaptive_schedule: root
+                                     alpha: 0
+                                     batch_size: 8
+                                     cfg: ./config/tcm09/tcm09_distill.yaml
+                                     ckpt: None
+                                     cl_epoch_end: 10
+                                     cl_epoch_start: 1
+                                     cl_prob_end: 0
+                                     cl_prob_start: 0.9
+                                     cl_tmp_end: 0.001
+                                     cl_tmp_start: 0.001
+                                     data_path: ['datasets/NER_data/tcm09']
+                                     debug: False
+                                     distill_weight: 1
+                                     dropout: 0
+                                     dump_path: experiments/tcm/1
+                                     early_stop: 100
+                                     entity_list: 
+                                     evaluate_interval: 1
+                                     exp_id: 1
+                                     exp_name: tcm
+                                     extra_annotate_type: none
+                                     first_training_epochs: 10
+                                     first_training_steps: 0
+                                     gamma: 0.2
+                                     hidden_dim: 768
+                                     info_per_epochs: 1
+                                     info_per_steps: 0
+                                     is_DCE: False
+                                     is_MTL: False
+                                     is_ODCE: False
+                                     is_curriculum_learning: False
+                                     is_distill: True
+                                     is_filter_O: False
+                                     is_fix_trained_classifier: True
+                                     is_from_scratch: False
+                                     is_load_ckpt_if_exists: True
+                                     is_load_common_first_model: True
+                                     is_load_disjoin_train: True
+                                     is_lucir: False
+                                     is_podnet: False
+                                     is_ranking_loss: False
+                                     is_rescale_new_weight: True
+                                     is_train_by_steps: False
+                                     is_unfix_O_classifier: False
+                                     logger_filename: train.log
+                                     lr: 2e-3
+                                     lucir_K: 1
+                                     lucir_lw_distill: 50
+                                     lucir_lw_mr: 1
+                                     lucir_mr_dist: 0.5
+                                     max_seq_length: 512
+                                     model_name: neuralmind/bert-base-portuguese-cased
+                                     mu: 0.9
+                                     n_samples: -1
+                                     nb_class_fg: 1
+                                     nb_class_pg: 1
+                                     none_idx: 103
+                                     podnet_is_nca: False
+                                     podnet_lw_pod_flat: 1
+                                     podnet_lw_pod_spat: 1
+                                     podnet_nca_margin: 0.6
+                                     podnet_nca_scale: 1
+                                     podnet_normalize: False
+                                     ranking_weight: 5
+                                     ref_temperature: 1
+                                     reserved_ratio: 0
+                                     sample_ratio: 0.5
+                                     sample_strategy: all
+                                     save_per_epochs: 0
+                                     save_per_steps: 0
+                                     schedule: (5,)
+                                     schema: BIO
+                                     seed: None
+                                     stable_lr: 4e-4
+                                     temperature: 2
+                                     top_k: 3
+                                     training_epochs: 10
+                                     training_steps: 0
+                                     weight_decay: 0.0005
+INFO - 04/26/23 12:05:24 - 0:00:00 - The experiment will be stored in experiments/tcm/1
+                                     
+INFO - 04/26/23 12:05:24 - 0:00:00 - {'debug': False, 'cfg': './config/tcm09/tcm09_distill.yaml', 'exp_name': 'tcm', 'logger_filename': 'train.log', 'dump_path': 'experiments/tcm/1', 'exp_id': '1', 'seed': None, 'model_name': 'neuralmind/bert-base-portuguese-cased', 'is_load_ckpt_if_exists': True, 'is_load_common_first_model': True, 'ckpt': None, 'dropout': 0, 'hidden_dim': 768, 'alpha': 0, 'none_idx': 103, 'data_path': ['datasets/NER_data/tcm09'], 'n_samples': -1, 'entity_list': '', 'schema': 'BIO', 'is_filter_O': False, 'is_load_disjoin_train': True, 'batch_size': 8, 'max_seq_length': 512, 'lr': '2e-3', 'is_train_by_steps': False, 'training_epochs': 10, 'first_training_epochs': 10, 'training_steps': 0, 'first_training_steps': 0, 'schedule': '(5,)', 'stable_lr': '4e-4', 'gamma': 0.2, 'mu': 0.9, 'weight_decay': 0.0005, 'info_per_epochs': 1, 'info_per_steps': 0, 'save_per_epochs': 0, 'save_per_steps': 0, 'evaluate_interval': 1, 'early_stop': 100, 'nb_class_pg': 1, 'nb_class_fg': 1, 'is_rescale_new_weight': True, 'is_fix_trained_classifier': True, 'is_unfix_O_classifier': False, 'is_MTL': False, 'extra_annotate_type': 'none', 'is_from_scratch': False, 'reserved_ratio': 0, 'is_distill': True, 'distill_weight': 1, 'adaptive_distill_weight': False, 'adaptive_schedule': 'root', 'temperature': 2, 'ref_temperature': 1, 'is_ranking_loss': False, 'ranking_weight': 5, 'is_lucir': False, 'lucir_lw_distill': 50, 'lucir_K': 1, 'lucir_mr_dist': 0.5, 'lucir_lw_mr': 1, 'is_podnet': False, 'podnet_is_nca': False, 'podnet_nca_scale': 1, 'podnet_nca_margin': 0.6, 'podnet_lw_pod_flat': 1, 'podnet_lw_pod_spat': 1, 'podnet_normalize': False, 'is_DCE': False, 'is_ODCE': False, 'sample_strategy': 'all', 'sample_ratio': 0.5, 'top_k': 3, 'is_curriculum_learning': False, 'cl_epoch_start': 1, 'cl_epoch_end': 10, 'cl_prob_start': 0.9, 'cl_prob_end': 0, 'cl_tmp_start': 0.001, 'cl_tmp_end': 0.001}
+INFO - 04/26/23 12:05:24 - 0:00:00 - Loading the default entity list from domain tcm09...
+INFO - 04/26/23 12:05:24 - 0:00:00 - label_list = ['O', 'B-NUMERO_EXERCICIO', 'I-NUMERO_EXERCICIO', 'B-CRITERIO_JULGAMENTO', 'I-CRITERIO_JULGAMENTO', 'B-VALOR_OBJETO', 'I-VALOR_OBJETO', 'B-MODALIDADE_LICITACAO', 'I-MODALIDADE_LICITACAO', 'B-DATA_SESSAO', 'I-DATA_SESSAO', 'B-OBJETO_LICITACAO', 'I-OBJETO_LICITACAO']
+INFO - 04/26/23 12:05:24 - 0:00:00 - Load training set data
+INFO - 04/26/23 12:05:24 - 0:00:00 - Loading data from datasets/NER_data/tcm09/train_fg_1_pg_1.pth...
+INFO - 04/26/23 12:05:24 - 0:00:00 - train size for each split: ['0_0:4661', '1_1:4661', '2_2:4661', '3_3:4661', '4_4:4661', '5_5:4661']
+INFO - 04/26/23 12:05:24 - 0:00:00 - Load development set data
+INFO - 04/26/23 12:05:24 - 0:00:00 - Loading data from datasets/NER_data/tcm09/dev.pth...
+INFO - 04/26/23 12:05:24 - 0:00:00 - Load test set data
+INFO - 04/26/23 12:05:24 - 0:00:00 - Loading data from datasets/NER_data/tcm09/test.pth...
+INFO - 04/26/23 12:05:24 - 0:00:01 - label distribution for dev set
+INFO - 04/26/23 12:05:24 - 0:00:01 - [('CRITERIO_JULGAMENTO', 142), ('DATA_SESSAO', 90), ('MODALIDADE_LICITACAO', 648), ('NUMERO_EXERCICIO', 330), ('OBJETO_LICITACAO', 106), ('VALOR_OBJETO', 32)]
+INFO - 04/26/23 12:05:24 - 0:00:01 - label distribution for test set
+INFO - 04/26/23 12:05:24 - 0:00:01 - [('CRITERIO_JULGAMENTO', 175), ('DATA_SESSAO', 81), ('MODALIDADE_LICITACAO', 871), ('NUMERO_EXERCICIO', 300), ('OBJETO_LICITACAO', 224), ('VALOR_OBJETO', 56)]
+INFO - 04/26/23 12:05:24 - 0:00:01 - dev size 4936; test size: 23716;
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - https://huggingface.co:443 "HEAD /neuralmind/bert-base-portuguese-cased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - https://huggingface.co:443 "HEAD /neuralmind/bert-base-portuguese-cased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - Attempting to acquire lock 140335804415808 on /root/.cache/huggingface/hub/models--neuralmind--bert-base-portuguese-cased/blobs/cb1693767adef60abf23d9fde3996f0c1e6310afad103a2db94ad44854568955.lock
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - Lock 140335804415808 acquired on /root/.cache/huggingface/hub/models--neuralmind--bert-base-portuguese-cased/blobs/cb1693767adef60abf23d9fde3996f0c1e6310afad103a2db94ad44854568955.lock
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG - 04/26/23 12:05:24 - 0:00:01 - https://cdn-lfs.huggingface.co:443 "GET /neuralmind/bert-base-portuguese-cased/cb1693767adef60abf23d9fde3996f0c1e6310afad103a2db94ad44854568955?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1682769925&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4tbGZzLmh1Z2dpbmdmYWNlLmNvL25ldXJhbG1pbmQvYmVydC1iYXNlLXBvcnR1Z3Vlc2UtY2FzZWQvY2IxNjkzNzY3YWRlZjYwYWJmMjNkOWZkZTM5OTZmMGMxZTYzMTBhZmFkMTAzYTJkYjk0YWQ0NDg1NDU2ODk1NT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2ODI3Njk5MjV9fX1dfQ__&Signature=sykYphe7LJy-2uDKS4~8KnHq4ISf~5pnGDQo6nh2qYMF2ro0L8~cBzCv0nWKO2rISaOAHR7WwAq1QvsVtrceLWSfoKSawN63-siVRTjYjsWgvH6Lds-mY6IP1vsGIYnZks8~PI6E5Yq9zMmjdtnpUjzlCMsGU8BnTu3dEjNO8wYxCS7ImjLGwBilD41gHaWVDBkKFewZt4ZpSRzbHAfw10fYnMEs52GMlHt49CfZ1uJon42xa2yxh00c~y69-KMEssb3-dtDg3KZYxTozNkmia0HPcXqC1mVIxakxqiDyENAxxDi~LHBDBc5rd2deh5Dhk-8R6yfPfKw9d1JjPzWng__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 438235074
+DEBUG - 04/26/23 12:05:26 - 0:00:02 - Attempting to release lock 140335804415808 on /root/.cache/huggingface/hub/models--neuralmind--bert-base-portuguese-cased/blobs/cb1693767adef60abf23d9fde3996f0c1e6310afad103a2db94ad44854568955.lock
+DEBUG - 04/26/23 12:05:26 - 0:00:02 - Lock 140335804415808 released on /root/.cache/huggingface/hub/models--neuralmind--bert-base-portuguese-cased/blobs/cb1693767adef60abf23d9fde3996f0c1e6310afad103a2db94ad44854568955.lock
+DEBUG - 04/26/23 12:05:28 - 0:00:04 - https://huggingface.co:443 "HEAD /neuralmind/bert-base-portuguese-cased/resolve/main/generation_config.json HTTP/1.1" 404 0
+INFO - 04/26/23 12:05:28 - 0:00:04 - =========================================================
+INFO - 04/26/23 12:05:28 - 0:00:04 - Beggin training the 1-th iter (total 6 iters)
+INFO - 04/26/23 12:05:28 - 0:00:04 - =========================================================
+DEBUG - 04/26/23 12:05:28 - 0:00:05 - https://huggingface.co:443 "HEAD /neuralmind/bert-base-portuguese-cased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG - 04/26/23 12:05:29 - 0:00:06 - https://huggingface.co:443 "HEAD /neuralmind/bert-base-portuguese-cased/resolve/main/generation_config.json HTTP/1.1" 404 0
+INFO - 04/26/23 12:05:30 - 0:00:06 - hidden_dim=768, output_dim=3
+INFO - 04/26/23 12:05:30 - 0:00:06 - All seen entity types = ['NUMERO_EXERCICIO']
+INFO - 04/26/23 12:05:30 - 0:00:06 - New entity types = ['NUMERO_EXERCICIO']
+INFO - 04/26/23 12:05:35 - 0:00:11 - Initial lr is [0.002]
+INFO - 04/26/23 12:05:35 - 0:00:11 - ============== epoch 1 ==============
