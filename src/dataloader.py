@@ -24,6 +24,8 @@ max_seq_length = params.max_seq_length
 
 # domain name to entity list
 domain2entity={
+    # #tcm09=6
+    'tcm09': ['OBJETO_LICITACAO', 'NUMERO_EXERCICIO', 'CRITERIO_JULGAMENTO', 'VALOR_OBJETO', 'MODALIDADE_LICITACAO', 'DATA_SESSAO'],
     # #conll2003=4
     'conll2003': ['location', 'misc', 'organisation', 'person'], 
     # #ontonotes5=18
