@@ -25,7 +25,7 @@ max_seq_length = params.max_seq_length
 # domain name to entity list
 domain2entity={
     # #harem=10
-    'harem': [ 'TEMPO', 'VALOR', 'LOCAL', 'OUTRO', 'ACONTECIMENTO', 'COISA', 'PESSOA', 'ABSTRACCAO', 'ORGANIZACAO', 'OBRA' ],
+    'harem': [ 'TEMPO', 'VALOR', 'LOCAL', 'ACONTECIMENTO', 'COISA', 'PESSOA', 'ABSTRACCAO', 'ORGANIZACAO', 'OBRA', 'OUTRO' ],
     # #tcm09=6
     'tcm09': ['NUMERO_EXERCICIO', 'CRITERIO_JULGAMENTO', 'VALOR_OBJETO', 'MODALIDADE_LICITACAO', 'DATA_SESSAO', 'OBJETO_LICITACAO'],
     # #conll2003=4

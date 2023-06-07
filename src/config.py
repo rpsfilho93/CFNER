@@ -24,7 +24,7 @@ def get_params():
     parser.add_argument("--seed", type=int, default=None, help="Random Seed")
 
     # Model
-    parser.add_argument("--model_name", type=str, default="bert-base-cased", help="model name (e.g., bert-base-cased, roberta-base or wide_resnet)")
+    parser.add_argument("--model_name", type=str, default="neuralmind/bert-base-portuguese-cased", help="model name (e.g., bert-base-cased, roberta-base or wide_resnet)")
     parser.add_argument("--is_load_ckpt_if_exists", default=False, action='store_true', help="Loading the ckpt if best finetuned ckpt exists")
     parser.add_argument("--is_load_common_first_model", default=False, action='store_true', help="Loading the common first ckpt if best finetuned ckpt exists")
     parser.add_argument("--ckpt", type=str, default=None, help="the pretrained lauguage model")
